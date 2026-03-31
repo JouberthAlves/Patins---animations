@@ -8,7 +8,7 @@ section.gallery {
     text-align: center;
   }
 
-  & heade span {
+  & header span {
     font: 500 var(--text-sm)/1.5 var(--ff-base);
   }
 
@@ -20,9 +20,9 @@ section.gallery {
   & .content {
     margin-top: 2rem;
     display: grid;
-    grid-template-areas: 
-    "A B B"
-    "C C D";
+    grid-template-areas:
+      "A B B"
+      "C C D";
 
     gap: 2.5rem;
   }
@@ -41,7 +41,7 @@ section.gallery {
       animation-range: 150px 450px;
     }
 
-    &>img {
+    & > img {
       height: 25rem;
       object-fit: cover;
       transition: scale 500ms;
@@ -54,7 +54,6 @@ section.gallery {
 
       figcaption {
         transform: translateY(0);
-        
       }
     }
 
@@ -64,17 +63,14 @@ section.gallery {
 
     &:nth-child(2) {
       grid-area: B;
-      
     }
 
     &:nth-child(3) {
       grid-area: C;
-      
     }
 
     &:nth-child(4) {
       grid-area: D;
-      
     }
   }
 
@@ -82,7 +78,7 @@ section.gallery {
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    gap: .5rem;
+    gap: 0.5rem;
 
     font: 500 var(--text-sm)/1.5 var(--ff-base);
     color: white;
@@ -109,5 +105,25 @@ section.gallery {
   from {
     opacity: 0;
     transform: translateY(100%);
+  }
+}
+
+@media (width <= 375px) {
+  section.gallery {
+
+    padding: 1.5rem;
+    & header span {
+      font: 500 12px/1.5 var(--ff-base);
+    }
+
+    & h2 {
+      font: 600 24px/1.5 var(--ff-base);
+    }
+
+    & .content {
+      margin-top: 1.5rem;
+      display: flex;
+      flex-direction: column;
+    }
   }
 }

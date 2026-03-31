@@ -36,3 +36,11 @@
     transform: translateX(-130px);
   }
 }
+
+@media (width <= 375px) {
+
+  .banner {
+    padding-block: 1.5rem;
+
+  }
+}
