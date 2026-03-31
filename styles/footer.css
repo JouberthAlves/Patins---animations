@@ -97,3 +97,28 @@ footer {
     }
   }
 }
+
+@media (width <= 375px) {
+  footer {
+    /* flex-direction: column; */
+    padding: 48px 24px 24px; 
+    flex-wrap: wrap;
+    display: block;
+
+    .logo {
+      margin-bottom: 48px;
+    }
+
+    nav {
+      /* gap: 1.5rem; */
+      display: block;
+      margin-bottom: 48px;
+      
+      
+      & a {
+        display: block;
+        margin-bottom: 24px;
+      }
+    }
+  }
+}
